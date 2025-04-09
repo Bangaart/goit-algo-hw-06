@@ -8,11 +8,8 @@ class Field:
         return str(self.value)
 
 class Name(Field):
-
-    def __repr__(self):
-        return str(self.value)
-
-
+    pass
+    
 class Phone(Field):
 
     def phone_validation(self):
@@ -98,3 +95,4 @@ print(f"{john.name}: {found_phone}")  # Виведення: John: 5555555555
 
 # Видалення запису Jane
 book.delete("Jane")
+
