@@ -31,8 +31,8 @@ class Record:
     def edit_phone(self, old_number, new_number):
         phone_obj = self.find_phone(old_number)
         if  phone_obj:
-            self.remove_phone(old_number)
             self.add_phone(new_number)
+            self.remove_phone(old_number)
         else:
             raise ValueError ("Check correctness of the number ")
 
@@ -58,7 +58,6 @@ class AddressBook(UserDict):
     def find(self, name):
         if name in self.data.keys():
             return self.data.get(name)
-        return None
 
     def delete(self, name):
         del self.data[name]
